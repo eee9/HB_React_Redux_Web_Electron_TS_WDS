@@ -1,0 +1,81 @@
+{
+  "name": "maix-react-redux-ts-k7t",
+  "version": "0.0.1",
+  "description": "React, Redux, Typescript",
+  "main": "index.js",
+  "author": "Maick <maick.ut@gmail.com>",
+  "homepage": ".",
+  "private": true,
+  "keywords": [
+    "browser",
+    "electron",
+    "electron-reload",
+    "electron-builder",
+    "react",
+    "redux",
+    "typescript",
+    "web",
+    "webpack",
+    "webpack-dev-server"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/runtime": "^7.10.5",
+    "@types/electron": "^1.6.10",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-test-renderer": "^16.9.2",
+    "babel-loader": "^8.1.0",
+    "electron": "^9.1.2",
+    "electron-builder": "^22.8.0",
+    "electron-reload": "^1.5.0",
+    "file-loader": "^6.0.0",
+    "metro-react-native-babel-preset": "^0.61.0",
+    "react-test-renderer": "^16.13.1",
+    "source-map-loader": "^1.0.1",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "build": {
+    "appId": "com.maixtest.app",
+    "productName": "MxTSApp7-K7R",
+    "directories": {
+      "app": "./app",
+      "output": "./_builds"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    }
+  },
+  "scripts": {
+    "b": "webpack-dev-server --open --mode development",
+    "c": "webpack --mode development",
+    "t": "tsc .",
+    "w": "webpack --mode development --watch",
+    "w_": "yarn w &",
+    "e": "NODE_DEV=Maix electron --no-sandbox ./app/main.js",
+    "ee": "yarn c && yarn w_ && yarn e",
+    "g": "set NODE_DEV=Maix && electron ./app/main.js",
+    "r": "./_builds/MxTSApp7-K7R-0.0.7.AppImage --no-sandbox",
+    "rasp": "electron-builder --linux --armv7l",
+    "raspx": "electron-builder --linux deb --armv7l",
+    "win": "electron-builder --win --x64",
+    "linux": "electron-builder --linux --x64",
+    "x": "electron-builder --linux deb --x64",
+    "xzz": "electron-builder --linux deb tar.xz --x64",
+    "z": "electron-builder"
+  }
+}
